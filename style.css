@@ -1,0 +1,573 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: white;
+    color: black;
+    padding: 5px 20px;
+    text-align: center;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 10px;
+    transition: color 0.5s ease-in-out, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: red;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -4px 2px -2px gray;
+}
+
+.noga-sekcija {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.noga-blok {
+    margin: 20px;
+    padding: 20px;
+}
+
+.noga-blok h4 {
+    margin-bottom: 20px;
+}
+
+.noga-blok p {
+    line-height: 1.5;
+}
+
+img {
+    max-width: 30%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-inner {
+    width: 100%;
+    margin: auto;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.item img {
+    width: auto;
+    height: auto;
+    max-height: 600px;
+}
+
+.opis {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.spodaj {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.avtomobili {
+    color: white;
+    background-color: #444;
+    padding: 10px 0;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.znamka {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.znamka img {
+    max-width: 30%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.znamka img:hover {
+    transform: scale(1.1);
+}
+
+.znamka h2 {
+    margin-top: 10px;
+}
+
+.znamka-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.znamka-item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #555;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.znamka-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.brand-logo {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.znamka-title {
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+}
+
+@media (max-width: 768px) {
+    .znamka-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .znamka-item {
+        width: 100%;
+    }
+}
+
+#model-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.model {
+    margin: 15px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.model img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.model:hover img {
+    transform: scale(1.1);
+}
+
+.model h3 {
+    color: white;
+    margin-top: 10px;
+}
+
+.okvir {
+    display: none;
+    position: fixed;
+    z-index: 2; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.okvir-content {
+    margin: auto;
+    display: flex;
+    max-width: 1000px;
+}
+
+.zapri {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.zapri:hover,
+.zapri:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.modeli-container {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.model-image {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.model-image:hover {
+    transform: scale(1.1);
+}
+
+#performance-data {
+    margin: 20px;
+    padding: 20px;
+    background-color: #000000;
+    color: white;
+}
+
+#performance-data, #cenik {
+    margin: 20px;
+    padding: 20px;
+    background-color: #000000;
+    color: white;
+}
+
+#performance-data h1, #audi h1, #bmw h1, #mercedes h1, #cenik h1, .red-text {
+    text-align: center;
+    color: #ff0000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+table th, table td {
+    border: 1px solid #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #444;
+    color: #ff0000;
+    text-transform: uppercase;
+}
+
+table td {
+    background-color: #333;
+}
+
+table tr:nth-child(even) td {
+    background-color: #2c2c2c;
+}
+
+table tbody tr:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+#cenik .red-text.left-text {
+    text-align: left;
+    color: #ff0000;
+}
+
+.cenik-stage {
+    margin-bottom: 40px;
+}
+
+.cenik-section {
+    margin-bottom: 20px;
+}
+
+.cenik-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cenik-section li {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.cenik-section li .price {
+    margin-left: auto;
+    color: #ff0000;
+}
+
+.cenik-notes {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #ccc;
+}
+
+.cenik-notes p {
+    margin: 5px 0;
+}
+
+.kontakt-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.kontakt-info {
+    width: 50%;
+}
+
+.kontakt-info h2, .kontakt-form h2 {
+    color: #ff0000;
+}
+
+.kontakt-info a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+.kontakt-info a:hover {
+    text-decoration: underline;
+}
+
+.kontakt-map {
+    width: 50%;
+}
+
+.kontakt-form {
+    padding: 20px;
+    background-color: #1e1e1e;
+}
+
+.kontakt-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt-form input, .kontakt-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #333;
+    border: 1px solid #555;
+    color: white;
+}
+
+.kontakt-form input::placeholder, .kontakt-form textarea::placeholder {
+    color: #bbb;
+}
+
+.kontakt-form button {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.kontakt-form button:hover {
+    background-color: darkred;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+.checkbox-container label {
+    color: #bbb;
+}
+
+.o-nas-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.o-nas-text {
+    width: 45%;
+    padding-right: 20px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.o-nas-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #ff0000;
+}
+
+.o-nas-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.o-nas-text ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.o-nas-text ul li {
+    margin-bottom: 10px;
+}
+
+.o-nas-text a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.o-nas-text a:hover {
+    text-decoration: underline;
+}
+
+.o-nas-image {
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideInRight 1s ease-in-out;
+}
+
+.o-nas-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .o-nas-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .o-nas-text, .o-nas-image {
+        width: 100%;
+        padding: 0;
+    }
+
+    .o-nas-text {
+        margin-bottom: 20px;
+    }
+}
